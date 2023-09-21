@@ -21,7 +21,7 @@ import java.nio.file.Path;
         id = "velocitychanneltb",
         name = "VelocityChannelTB",
         version = "1.0",
-        description = "opis",
+        description = "This plugin enabling communication for TB plugins between Spigot servers.",
         authors = {"TechBrat"}
 )
 public class VelocityChannelTB {
@@ -39,7 +39,7 @@ public class VelocityChannelTB {
         logger.info("Enabling plugin...");
         server.getChannelRegistrar().register(MinecraftChannelIdentifier.from("techbrat:channel"));
         logger.info("Velocity channel for velocity-spigot plugins enabled!");
-        makeConfig();
+        //makeConfig();
 
 
         logger.info("Plugin successfully enabled!");
@@ -56,7 +56,7 @@ public class VelocityChannelTB {
         }
     }
 
-    private void makeConfig() {
+    /*private void makeConfig() {
         try {
             if (!dataDirectory.toFile().exists()) {
                 dataDirectory.toFile().mkdir();
@@ -66,15 +66,16 @@ public class VelocityChannelTB {
             File config = new File(dataDirectory.toFile(), "config.yml");
 
             if (!config.exists()) {
+
                 getClass().getResourceAsStream("config.yml").transferTo(Files.newOutputStream(config.toPath()));
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
     public boolean isDebug() {
-        return true;
+        return false;
     }
 
     public boolean debugLog(String debug) {
